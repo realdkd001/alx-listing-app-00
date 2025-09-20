@@ -1,8 +1,11 @@
 import React from 'react'
+import {ButtonProps} from '@/interfaces'
 
-function Button() {
+const Button: React.FC<ButtonProps> = ({label, onClick, style}) => {
   return (
-    <div>Button</div>
+    <div>
+    <button className={`hover:cursor-pointer h-11.5 w-26 text-lg rounded-[70px]  ${style}`} onClick={onClick}>{label}</button>
+    </div>
   )
 }
 
